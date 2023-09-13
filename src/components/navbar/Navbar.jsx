@@ -3,9 +3,12 @@ import { NavLink } from "react-router-dom"; // Importa NavLink de react-router-d
 import "./navbar.scss"; // Importa estilos CSS desde un archivo llamado navbar.scss
 import { useMarketplace } from "../../context"; // Importa el contexto global desde "../../context"
 import RegisterModal from "../modal/RegisterModal"; // Importa el componente RegisterModal desde "../modal/RegisterModal"
+import Carrito from "../../components/carrito/Carrito";
+
+
 
 export const NavModel = () => {
-  const { showModal, setShowModal } = useMarketplace(); // Obtiene el valor de showModal y setShowModal desde el contexto global
+  const { showModal, setShowModal , mostrarModal, setMostrarModal} = useMarketplace(); // Obtiene el valor de showModal y setShowModal desde el contexto global
 
 
   // Función para cambiar el estado de showModal y abrir/cerrar el modal
@@ -54,6 +57,7 @@ export const NavModel = () => {
           </div>
           {/* Renderiza el componente RegisterModal si showModal es verdadero, de lo contrario, muestra null */}
           {showModal ? null : <RegisterModal />}
+          <Carrito />
         </Container>
       </Navbar>
     </>

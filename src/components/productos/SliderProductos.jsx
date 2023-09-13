@@ -1,7 +1,18 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
+import { useMarketplace } from '../../context'
 
 export const SliderProductos = ({handleSelect, index, pageProductos}) => {
+  const {car, setCar } = useMarketplace()
+
+  const onAgregarProducto = (producto) => {
+  
+    console.log('_________')
+    console.log(car)
+    console.log(producto)
+    setCar((car) => [...car, producto]);
+  };
+
   return (
     <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
     {pageProductos.map((producto, productoIndex) => {
@@ -21,9 +32,14 @@ export const SliderProductos = ({handleSelect, index, pageProductos}) => {
                     <img src={`.././src/assets/${productoGrupo.img1}`} style={{ zoom: "13%" }} alt={productoGrupo.nombre} />
                     <h3>{productoGrupo.nombre}</h3>
                     <p>${productoGrupo.precio}</p>
-                    <button className="icon-button">
-                      <span className="material-icons-outlined">add_circle</span>
-                    </button>
+                    <button
+                        className="icon-button"
+                        onClick={() => onAgregarProducto(productoGrupo)} // Pasar el producto a la función
+                      >
+                        <span className="material-icons-outlined">
+                          <big>+</big>
+                        </span>
+                      </button>
                   </div>
                 </div>
               ))}

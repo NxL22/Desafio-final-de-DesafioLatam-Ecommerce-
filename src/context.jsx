@@ -11,7 +11,9 @@ export const MarketplaceProvider = ({ children }) => {
   const [pageProductos, setPageProductos] = useState([]); // Estado para los productos a mostrar en la página
   const [showLogin, setShowLogin] = useState(true); // Estado para mostrar/ocultar el inicio de sesión
   const [showModal, setShowModal] = useState(true); // Estado para mostrar/ocultar un modal
-
+  const [car, setCar] = useState([]);
+    
+  
   // Utiliza el hook useEffect para cargar datos de productos cuando se monta el componente
   useEffect(() => {
     const fetchProductos = async () => {
@@ -46,6 +48,8 @@ export const MarketplaceProvider = ({ children }) => {
 
   // Crea un objeto globalState que contiene todos los estados y funciones relevantes
   const globalState = {
+    car, 
+    setCar,
     productos,
     pageProductos,
     setPageProductos,

@@ -13,12 +13,13 @@ import {
   IniciarSesionView,
   RegistrarUsuarioView,
   RegistrarProductoView,
-  CarritoView,
   MiPerfilView,
   NotFoundView,
+
 } from "./views"; // Importa varios componentes desde "./views"
 
 import { Footer } from "./components/footer/Footer"; // Importa el componente Footer desde "./components/footer/Footer"
+import { CarritoView } from "./views/carrito/CarritoView";
 
 function App() {
   // Define la función del componente principal

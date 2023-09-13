@@ -1,5 +1,5 @@
 export * from './404/NotFound'; // Exporta todo desde el módulo NotFound en la ruta './404/NotFound'
-export * from './carrito/Carrito'; // Exporta todo desde el módulo Carrito en la ruta './carrito/Carrito'
+export * from './carrito/CarritoView'; // Exporta todo desde el módulo Carrito en la ruta './carrito/Carrito'
 export * from './detalle-producto/DetalleProducto'; // Exporta todo desde el módulo DetalleProducto en la ruta './detalle-producto/DetalleProducto'
 export * from './iniciar-sesion/IniciarSesion'; // Exporta todo desde el módulo IniciarSesion en la ruta './iniciar-sesion/IniciarSesion'
 export * from './inicio/Inicio'; // Exporta todo desde el módulo Inicio en la ruta './inicio/Inicio'

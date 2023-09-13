@@ -78,8 +78,11 @@
   }
   
   .icon-button {
+    width: 50px; /* Define el tamaño del botón */
+    height: 50px; /* Debe ser igual que el ancho para hacer un círculo perfecto */
+    border: 2px solid blue; /* Define el borde azul */
+    border-radius: 50%;
     background-color: transparent;
-    border: none;
     cursor: pointer;
     outline: none; /* Evita el contorno al hacer clic */
     position: absolute;
